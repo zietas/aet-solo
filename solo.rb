@@ -1,2 +1,2 @@
-file_cache_path "/home/aet/cache"
-cookbook_path "/home/aet/chef"
+file_cache_path "/var/chef/cache"
+cookbook_path "#{Dir.pwd}/cookbooks"
