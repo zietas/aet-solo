@@ -1,11 +1,11 @@
 {
  "run_list": [
    "recipe[aet::display]",
-   "recipe[aet::chrome]",
    "recipe[aet::apache]",
    "recipe[aet::mongo]",
    "recipe[aet::activemq]",
    "recipe[aet::browsermob]",
+   "recipe[aet::chrome]",
    "recipe[aet::xvfb]",
    "recipe[aet::seleniumgrid_hub]",
    "recipe[aet::seleniumgrid_node_chrome]",
