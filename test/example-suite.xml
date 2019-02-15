@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite company="test" project="aet" name="dev">
+    <test name="components" useProxy="rest">
+        <collect>
+            <open/>
+            <sleep duration="5000"/>
+            <resolution width="1920" height="1080"/>
+            <sleep duration="1500"/>
+            <screen name="desktop"/>
+            <status-codes/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+            <status-codes filterRange="400,600"/>
+        </compare>
+        <urls>
+            <url href="http://onet.pl"/>
+        </urls>
+    </test>
+</suite>
