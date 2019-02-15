@@ -91,7 +91,8 @@ Verify that you can access services on all the listed ports.
 1. Access to Karaf Web Console under `<IP>:8181/system/console/configMgr`
 2. Add new parameter `--no-sandbox` to `com.cognifide.aet.worker.drivers.chrome.ChromeWebDriverFactory`
 3. Reconfigure IP address for `com.cognifide.aet.proxy.RestProxyManager`
-4. unbind and bind again all AET modules - yeah... I know... we should not have to do it, but it ensures that everything will work (i.e. mongo connection)
+4. Change IP address for reports `com.cognifide.aet.rest.helpers.ReportConfigurationManager`
+5. unbind and bind again all AET modules - yeah... I know... we should not have to do it, but it ensures that everything will work (i.e. mongo connection)
 
 ### AET Test Run
 
@@ -114,3 +115,7 @@ In order to check if everything is working fine just:
 
 1. go to `./test` directory in aet-solo project
 2. run `./aet.sh http://localhost:8181 example-suite.xml`
+
+In case of issues just look into the logs:
+
+`tail -f /var/log/karaf/*`
