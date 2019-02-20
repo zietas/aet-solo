@@ -1,8 +1,6 @@
 {
  "run_list": [
-   "recipe[aet::display]",
    "recipe[aet::apache]",
-   "recipe[aet::mongo]",
    "recipe[aet::activemq]",
    "recipe[aet::browsermob]",
    "recipe[aet::chrome]",
