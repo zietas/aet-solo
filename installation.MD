@@ -34,15 +34,15 @@ SELINUX=disabled
 ### Chef Solo
 as Root
 ```
-curl -L https://www.opscode.com/chef/install.sh | bash
+curl -Lk https://www.opscode.com/chef/install.sh | bash
 chef-solo -v
 ```
 
 ### Ruby
 ```
 sudo yum install git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
+echo 'PATH=$PATH:$HOME/.rbenv/bin:/opt/chef/embedded/bin/' >> ~/.bashrc
 curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 rbenv install 2.5.1
